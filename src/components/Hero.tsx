@@ -2,10 +2,9 @@
 import React from 'react';
 import CustomButton from './CustomButton';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
-  const handleScroll = () => {};
-
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
@@ -15,11 +14,12 @@ const Hero = () => {
         <p className="hero__subtitle">
           Streamline your car rental experience with effortless booking process
         </p>
-        <CustomButton
-          title="Explore Cars"
-          containerStyles="bg-primary-blue text-white rounded-full mt-10"
-          onClick={handleScroll}
-        />
+        <Link href={'/#car-catalogue'}>
+          <CustomButton
+            title="Explore Cars"
+            containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          />
+        </Link>
       </div>
 
       <div className="hero__image-container">

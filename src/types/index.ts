@@ -1,7 +1,8 @@
 import { StaticImageData } from 'next/image';
-import { MouseEventHandler } from 'react';
+import { ButtonHTMLAttributes, MouseEventHandler } from 'react';
 
-export interface ICustomButtonProps {
+export interface ICustomButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
   disabled?: boolean;
   type?: 'button' | 'submit';
