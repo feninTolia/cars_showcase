@@ -38,7 +38,6 @@ export default async function Home({ searchParams }: { searchParams: any }) {
 
         {!isDataEmpty ? (
           <section>
-            WE Have Cars
             <div className="home__cars-wrapper">
               {allCars.map((car, idx) => (
                 <CarCard key={car.model + car.year + idx} car={car} />
